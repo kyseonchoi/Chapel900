@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chapel 900 | Racquet Stringing</title>
+<meta name="description" content="Local racquet stringing in downtown New Haven. Public and YKTS member pricing, house strings, machine details, and tennis/string tips." />
+<style>
+:root{
+  --bg:#f5f3ee;
+  --card:#fffdf8;
+  --ink:#171717;
+  --muted:#67645f;
+  --line:#d9d4ca;
+  --soft:#ece8df;
+  --soft2:#f4f1ea;
+  --accent:#1f1f1f;
+  --max:1160px;
+  --r:24px;
+  --shadow:0 14px 34px rgba(0,0,0,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.58;
+}
+html[lang="ko"] body{
+  font-family:"Pretendard","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",Inter,Arial,sans-serif;
+  line-height:1.72;
+  letter-spacing:-0.01em;
+  word-break:keep-all;
+}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:auto;padding:0 22px}
+header{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(14px);
+  background:rgba(245,243,238,.9);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+nav{
+  height:72px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+}
+.brand{
+  display:flex;align-items:center;gap:12px;
+  text-decoration:none;font-weight:850;letter-spacing:.02em;
+}
+.mark{
+  width:42px;height:42px;border:2px solid var(--ink);border-radius:50%;
+  display:grid;place-items:center;font-size:13px;font-weight:900;
+}
+.nav-actions{display:flex;gap:10px;align-items:center}
+.toggle{
+  display:inline-flex;background:#e9e5dc;border-radius:999px;padding:4px;border:1px solid var(--line)
+}
+.toggle button{
+  appearance:none;border:0;background:transparent;border-radius:999px;
+  padding:8px 12px;font-weight:850;color:#66635e;cursor:pointer
+}
+.toggle button.active{background:var(--ink);color:#fff}
+.hero{padding:84px 0 34px}
+.eyebrow{
+  font-size:13px;font-weight:850;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)
+}
+html[lang="ko"] .eyebrow{letter-spacing:.05em}
+h1{
+  margin:14px 0 18px;
+  font-size:clamp(48px,8vw,96px);
+  line-height:.96;
+  letter-spacing:-.05em;
+  max-width:920px;
+}
+html[lang="ko"] h1{line-height:1.08;letter-spacing:-.03em}
+.lead{
+  font-size:clamp(18px,2.1vw,24px);
+  max-width:760px;color:#3d3b37
+}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{
+  border:1px solid var(--line);background:rgba(255,255,255,.48);
+  border-radius:999px;padding:8px 12px;font-size:13px
+}
+.explore{padding:18px 0 60px}
+.explore-intro{margin:0 0 18px;color:var(--muted);font-size:14px}
+.accordion-stack{display:grid;gap:14px}
+.panel{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow);overflow:hidden
+}
+.panel summary{
+  list-style:none;cursor:pointer;padding:24px 26px;
+  display:flex;align-items:center;justify-content:space-between;gap:22px;
+  user-select:none
+}
+.panel summary::-webkit-details-marker{display:none}
+.panel-summary-left{display:flex;align-items:center;gap:16px;min-width:0}
+.panel-number{
+  width:42px;height:42px;border-radius:50%;background:var(--ink);color:#fff;
+  display:grid;place-items:center;font-size:12px;font-weight:900;letter-spacing:.07em;flex:0 0 auto
+}
+.panel-title{
+  font-size:clamp(22px,3vw,34px);font-weight:900;letter-spacing:-.03em;line-height:1.08
+}
+.panel-sub{color:var(--muted);font-size:13px;margin-top:4px}
+.chevron{
+  width:34px;height:34px;border-radius:50%;background:var(--soft);
+  display:grid;place-items:center;font-size:20px;transition:transform .22s ease
+}
+.panel[open] .chevron{transform:rotate(45deg)}
+.panel-body{padding:0 26px 28px;border-top:1px solid var(--line)}
+.section-head{
+  display:flex;align-items:end;justify-content:space-between;gap:22px;
+  padding-top:24px;margin-bottom:20px
+}
+h2{margin:0;font-size:clamp(30px,4vw,48px);letter-spacing:-.03em}
+html[lang="ko"] h2{line-height:1.18}
+.sub{color:var(--muted);max-width:700px;margin:8px 0 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px}
+.prices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.price-card{padding:20px;background:var(--soft2)}
+.price-top{display:flex;justify-content:space-between;gap:18px;align-items:start}
+.price-name{font-weight:850;font-size:19px}
+.price-desc{color:var(--muted);font-size:14px;margin-top:5px}
+.price{font-size:31px;line-height:1;font-weight:900;letter-spacing:-.04em;white-space:nowrap}
+.member-note{margin-top:14px;padding:14px 16px;border-radius:14px;background:var(--soft);color:#514e48;font-size:13px}
+.addon-list{display:grid;gap:10px;margin-top:14px}
+.addon{padding:14px 16px;border-radius:14px;background:var(--soft2);border:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
+.addon strong{display:block}
+.addon small{display:block;color:var(--muted);margin-top:4px}
+.addon .tag{font-weight:900;white-space:nowrap}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.string-card{padding:0;background:var(--soft2);overflow:hidden}
+.string-card img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;background:#f1ede5}
+.string-body{padding:18px 18px 20px}
+.string-card h3,.tip-card h3{margin:0 0 7px;font-size:20px}
+.string-meta{font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:850;color:var(--muted)}
+html[lang="ko"] .string-meta{letter-spacing:.04em}
+.string-card p,.tip-card p,.machine-main p,.machine-side p{color:#55514b;margin:9px 0 0}
+.string-tag{display:inline-block;margin-top:15px;border:1px solid var(--line);border-radius:999px;padding:6px 9px;font-size:12px;font-weight:850;background:#fff}
+.machine{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}
+.machine-main{padding:24px;background:var(--soft2)}
+.machine-kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:850}
+html[lang="ko"] .machine-kicker{letter-spacing:.05em}
+.machine-title{font-size:clamp(28px,4vw,44px);letter-spacing:-.04em;margin:8px 0 12px;line-height:1.04}
+.machine-visual{margin:16px 0 6px}
+.machine-visual img{
+  width:100%;display:block;background:#000;border-radius:18px;padding:14px;object-fit:contain;
+  border:1px solid var(--line)
+}
+.specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:18px}
+.spec{padding:15px;border-radius:14px;background:#fff;border:1px solid var(--line)}
+.spec strong{display:block;margin-bottom:4px}
+.spec span{font-size:13px;color:#605d57}
+.machine-side{padding:24px;background:var(--ink);color:#fff;border-color:var(--ink)}
+.machine-side p{color:#d6d2ca}
+.machine-side .big{font-size:33px;font-weight:900;letter-spacing:-.04em;line-height:1.05;margin:10px 0}
+.tips-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tip-card{padding:20px;background:var(--soft2)}
+.tip-card.full{grid-column:1/-1}
+.tip-icon{font-size:22px;margin-bottom:8px}
+.mini-table{
+  width:100%;border-collapse:collapse;margin-top:14px;background:#fff;
+  border-radius:12px;overflow:hidden
+}
+.mini-table th,.mini-table td{
+  padding:11px 10px;border-top:1px solid var(--line);vertical-align:top;text-align:left;font-size:14px
+}
+.mini-table tr:first-child th{border-top:0}
+.mini-table th{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+html[lang="ko"] .mini-table th{letter-spacing:.04em}
+.refs{padding:18px 20px;background:var(--soft2);margin-top:12px}
+.refs details summary{padding:0;display:block;font-weight:850;cursor:pointer}
+.refs details[open] summary{margin-bottom:10px}
+.refs ol{padding-left:21px;color:#56524c;font-size:13px}
+.refs li{margin:8px 0}
+.myth{display:grid;grid-template-columns:220px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--line)}
+.myth:first-of-type{border-top:0}
+.myth strong{font-size:13px}
+.myth span{font-size:14px;color:#55514b}
+.smallcaps{text-transform:uppercase;letter-spacing:.12em;font-weight:850;font-size:11px}
+
+.work-gallery{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-bottom:14px;
+}
+.work-photo{
+  margin:0;
+  background:var(--soft2);
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+}
+.work-photo img{
+  width:100%;
+  display:block;
+  aspect-ratio:1/1;
+  object-fit:cover;
+}
+.work-photo figcaption{
+  padding:12px 14px;
+  color:var(--muted);
+  font-size:13px;
+}
+.log-table-wrap{
+  overflow-x:auto;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fff;
+}
+.log-table{
+  width:100%;
+  min-width:760px;
+  border-collapse:collapse;
+}
+.log-table th,.log-table td{
+  padding:13px 12px;
+  border-top:1px solid var(--line);
+  text-align:left;
+  vertical-align:top;
+  font-size:13px;
+}
+.log-table thead th{
+  border-top:0;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  font-size:11px;
+  background:var(--soft2);
+}
+html[lang="ko"] .log-table thead th{letter-spacing:.03em}
+.log-note{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
+.footerline{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:22px}
+@media(max-width:900px){
+  .prices,.grid3,.machine,.tips-grid{grid-template-columns:1fr}
+  .work-gallery{grid-template-columns:1fr 1fr}
+  .tip-card.full{grid-column:auto}
+  .specs{grid-template-columns:1fr}
+  .section-head{align-items:start;flex-direction:column}
+  .myth{grid-template-columns:1fr;gap:6px}
+}
+@media(max-width:720px){
+  .work-gallery{grid-template-columns:1fr}
+  .hero{padding-top:58px}
+  .panel summary{padding:20px}
+  .panel-body{padding:0 20px 22px}
+  .panel-sub{display:none}
+  .footerline{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#top">
+        <span class="mark">C900</span>
+        <span>CHAPEL 900</span>
+      </a>
+      <div class="nav-actions">
+        <div class="toggle" aria-label="Language">
+          <button id="enBtn" class="active" type="button">EN</button>
+          <button id="koBtn" type="button">한국어</button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow" data-en="Racquet Stringing · Downtown New Haven" data-ko="라켓 스트링 서비스 · 뉴헤이븐 다운타운">Racquet Stringing · Downtown New Haven</div>
+      <h1 data-en="Racquet stringing,<br>without the guesswork." data-ko="감이 아니라,<br>일관된 기준으로 스트링합니다.">Racquet stringing,<br>without the guesswork.</h1>
+      <p class="lead" data-en="Small-batch local stringing with clear pricing, thoughtful string selection, and a repeatable process." data-ko="명확한 가격, 목적에 맞는 스트링 선택, 반복 가능한 작업 과정을 바탕으로 소규모 로컬 스트링 서비스를 제공합니다.">Small-batch local stringing with clear pricing, thoughtful string selection, and a repeatable process.</p>
+      <div class="chips">
+        <span class="chip" data-en="Public pricing" data-ko="일반 가격">Public pricing</span>
+        <span class="chip" data-en="YKTS member pricing" data-ko="YKTS 회원 가격">YKTS member pricing</span>
+        <span class="chip" data-en="Bring your own string welcome" data-ko="개인 스트링 지참 가능">Bring your own string welcome</span>
+        <span class="chip" data-en="Two-piece and hybrid setups available" data-ko="2-piece 및 하이브리드 가능">Two-piece and hybrid setups available</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="explore">
+    <div class="wrap">
+      <p class="explore-intro" data-en="Choose a section below. Each panel opens only when you need it." data-ko="아래 항목을 눌러 필요한 정보만 펼쳐보세요.">Choose a section below. Each panel opens only when you need it.</p>
+      <div class="accordion-stack">
+
+        <details class="panel" open>
+          <summary>
+            <div class="panel-summary-left">
+              <div class="panel-number">01</div>
+              <div>
+                <div class="panel-title" data-en="Pricing" data-ko="가격">Pricing</div>
+                <div class="panel-sub" data-en="Public and YKTS member rates" data-ko="일반 및 YKTS 회원 가격">Public and YKTS member rates</div>
+              </div>
+            </div>
+            <div class="chevron">+</div>
+          </summary>
+          <div class="panel-body">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow" data-en="Pricing" data-ko="가격">Pricing</div>
+                <h2 data-en="Simple, upfront rates." data-ko="간단하고 명확하게.">Simple, upfront rates.</h2>
+                <p class="sub" data-en="Public pricing is shown by default. YKTS members can switch to member pricing below." data-ko="기본값은 일반 가격입니다. YKTS 회원은 아래에서 회원 가격으로 전환할 수 있습니다.">Public pricing is shown by default. YKTS members can switch to member pricing below.</p>
+              </div>
+              <div class="toggle" aria-label="Price type">
+                <button id="publicBtn" class="active" type="button" data-en="Public" data-ko="일반">Public</button>
+                <button id="memberBtn" type="button" data-en="YKTS Member" data-ko="YKTS 회원">YKTS Member</button>
+              </div>
+            </div>
+
+            <div class="prices">
+              <div class="card price-card">
+                <div class="price-top">
+                  <div>
+                    <div class="price-name" data-en="Bring Your Own String" data-ko="스트링 지참">Bring Your Own String</div>
+                    <div class="price-desc" data-en="Labor only. Your string, your setup." data-ko="작업비만 포함됩니다. 원하는 스트링과 세팅을 가져오세요.">Labor only. Your string, your setup.</div>
+                  </div>
+                  <div class="price" data-public="$20" data-member="$15">$20</div>
+                </div>
+              </div>
+
+              <div class="card price-card">
+                <div class="price-top">
+                  <div>
+                    <div class="price-name" data-en="Synthetic Gut" data-ko="신세틱 거트">Synthetic Gut</div>
+                    <div class="price-desc" data-en="Comfortable, economical everyday setup." data-ko="편안하고 경제적인 일상용 세팅입니다.">Comfortable, economical everyday setup.</div>
+                  </div>
+                  <div class="price" data-public="$35" data-member="$25">$35</div>
+                </div>
+              </div>
+
+              <div class="card price-card">
+                <div class="price-top">
+                  <div>
+                    <div class="price-name" data-en="Poly and Hybrid" data-ko="폴리 및 하이브리드">Poly and Hybrid</div>
+                    <div class="price-desc" data-en="Smooth poly full bed or custom house-string hybrid." data-ko="라운드 폴리 풀베드 또는 하우스 스트링 하이브리드입니다.">Smooth poly full bed or custom house-string hybrid.</div>
+                  </div>
+                  <div class="price" data-public="$40" data-member="$30">$40</div>
+                </div>
+              </div>
+
+              <div class="card price-card">
+                <div class="price-top">
+                  <div>
+                    <div class="price-name" data-en="Shaped Spin Poly" data-ko="쉐이프드 스핀 폴리">Shaped Spin Poly</div>
+                    <div class="price-desc" data-en="High-spin shaped polyester option." data-ko="스핀 성향이 강한 쉐이프드 폴리 옵션입니다.">High-spin shaped polyester option.</div>
+                  </div>
+                  <div class="price" data-public="$45" data-member="$35">$45</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="addon-list">
+              <div class="addon">
+                <div>
+                  <strong data-en="Minor grommet or tubing repair" data-ko="간단한 그로밋 또는 튜빙 수리">Minor grommet or tubing repair</strong>
+                  <small data-en="For cracked shared holes or worn tie-off points. Larger grommet replacement may require a separate discussion." data-ko="공유 홀 크랙, 타이오프 부위 마모 등 간단한 수리 기준입니다. 큰 범위의 그로밋 교체는 별도 상담이 필요할 수 있습니다.">For cracked shared holes or worn tie-off points. Larger grommet replacement may require a separate discussion.</small>
+                </div>
+                <div class="tag">$5+</div>
+              </div>
+            </div>
+
+            <div class="member-note" data-en="YKTS member pricing is offered as a community courtesy. Chapel 900 is an independent stringing service and is not operated by YKTS." data-ko="YKTS 회원 가격은 커뮤니티 차원의 혜택으로 제공됩니다. Chapel 900은 YKTS가 운영하는 서비스가 아닌 독립 스트링 서비스입니다.">YKTS member pricing is offered as a community courtesy. Chapel 900 is an independent stringing service and is not operated by YKTS.</div>
+          </div>
+        </details>
+
+        <details class="panel">
+          <summary>
+            <div class="panel-summary-left">
+              <div class="panel-number">02</div>
+              <div>
+                <div class="panel-title" data-en="House Strings" data-ko="하우스 스트링">House Strings</div>
+                <div class="panel-sub" data-en="Comfort, all around poly, and spin" data-ko="편안함, 범용 폴리, 스핀">Comfort, all around poly, and spin</div>
+              </div>
+            </div>
+            <div class="chevron">+</div>
+          </summary>
+          <div class="panel-body">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow" data-en="House Strings" data-ko="하우스 스트링">House Strings</div>
+                <h2 data-en="Three clear roles." data-ko="역할이 분명한 세 가지.">Three clear roles.</h2>
+                <p class="sub" data-en="A compact lineup: one economical nylon, one versatile round poly, and one spin-focused shaped poly." data-ko="경제적인 나일론, 범용 라운드 폴리, 스핀 중심 쉐이프드 폴리로 간결하게 구성했습니다.">A compact lineup: one economical nylon, one versatile round poly, and one spin-focused shaped poly.</p>
+              </div>
+            </div>
+
+
+            <div class="card" style="padding:20px;margin-bottom:12px;background:var(--soft2);">
+              <div class="smallcaps" data-en="Quick Recommendation" data-ko="간단 추천표">Quick Recommendation</div>
+              <h3 style="margin:8px 0 4px;font-size:22px;" data-en="Not sure what to choose?" data-ko="어떤 스트링이 맞을지 모르겠다면">Not sure what to choose?</h3>
+              <p class="sub" style="margin-top:4px;" data-en="Use this as a starting point. Final choice can be adjusted for swing speed, comfort, durability, and preferred feel." data-ko="아래 표를 시작점으로 보시면 됩니다. 최종 선택은 스윙 스피드, 편안함, 내구성, 선호 타구감에 따라 조정할 수 있습니다.">Use this as a starting point. Final choice can be adjusted for swing speed, comfort, durability, and preferred feel.</p>
+
+              <table class="mini-table" style="margin-top:16px;">
+                <thead>
+                  <tr>
+                    <th data-en="If you want..." data-ko="원하는 방향">If you want...</th>
+                    <th data-en="Recommended setup" data-ko="추천 세팅">Recommended setup</th>
+                    <th data-en="Why" data-ko="이유">Why</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-en="Comfort and value" data-ko="편안함과 가성비">Comfort and value</td>
+                    <td>HEAD Synthetic Gut</td>
+                    <td data-en="Easy on the arm, economical, and a good default for many recreational players." data-ko="팔에 비교적 편안하고 경제적이라 많은 레크리에이션 플레이어에게 무난한 기본값입니다.">Easy on the arm, economical, and a good default for many recreational players.</td>
+                  </tr>
+                  <tr>
+                    <td data-en="Balanced poly control" data-ko="균형 잡힌 폴리 컨트롤">Balanced poly control</td>
+                    <td>Yonex POLYTOUR PRO</td>
+                    <td data-en="A smooth, versatile round poly for players who want more control without going to an especially firm setup." data-ko="매끄럽고 범용성이 높은 라운드 폴리로, 지나치게 딱딱한 세팅 없이 컨트롤을 원하는 플레이어에게 적합합니다.">A smooth, versatile round poly for players who want more control without going to an especially firm setup.</td>
+                  </tr>
+                  <tr>
+                    <td data-en="More spin and bite" data-ko="더 많은 스핀과 볼 바이트">More spin and bite</td>
+                    <td>Weiss Cannon Ultra Cable</td>
+                    <td data-en="A shaped poly for players who actively use topspin and want a more spin-oriented response." data-ko="탑스핀을 적극적으로 사용하는 플레이어가 더 강한 볼 바이트와 스핀 성향을 원할 때 적합합니다.">A shaped poly for players who actively use topspin and want a more spin-oriented response.</td>
+                  </tr>
+                  <tr>
+                    <td data-en="Poly feel with more comfort" data-ko="폴리 느낌은 유지하면서 더 편안하게">Poly feel with more comfort</td>
+                    <td data-en="Poly mains + Synthetic Gut crosses" data-ko="폴리 메인 + 신세틱 거트 크로스">Poly mains + Synthetic Gut crosses</td>
+                    <td data-en="A practical hybrid option when you want to keep poly characteristics while softening the overall response." data-ko="폴리의 성향은 유지하면서 전체 타구감을 조금 더 부드럽게 만들고 싶을 때 실용적인 하이브리드 옵션입니다.">A practical hybrid option when you want to keep poly characteristics while softening the overall response.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="grid3">
+              <article class="card string-card">
+                <img src="assets/head_synthetic_gut.svg" alt="HEAD Synthetic Gut">
+                <div class="string-body">
+                  <div class="string-meta">NYLON · 17G</div>
+                  <h3>HEAD Synthetic Gut</h3>
+                  <p data-en="Comfort-oriented and budget-friendly. A sensible choice for recreational players who do not need a full polyester bed." data-ko="편안함과 가성비가 중심입니다. 풀 폴리에스터가 꼭 필요하지 않은 레크리에이션 플레이어에게 무난한 선택입니다.">Comfort-oriented and budget-friendly. A sensible choice for recreational players who do not need a full polyester bed.</p>
+                  <span class="string-tag" data-en="Comfort / Value" data-ko="편안함 / 가성비">Comfort / Value</span>
+                </div>
+              </article>
+
+              <article class="card string-card">
+                <img src="assets/yonex_polytour_pro.svg" alt="Yonex POLYTOUR PRO">
+                <div class="string-body">
+                  <div class="string-meta">POLYESTER · 1.25 mm · ROUND</div>
+                  <h3>Yonex POLYTOUR PRO</h3>
+                  <p data-en="Smooth, all-around polyester with a more forgiving response than many firm control polys. Useful as a full bed or as a hybrid cross." data-ko="매끄러운 라운드 타입의 범용 폴리에스터입니다. 단단한 컨트롤 폴리보다 비교적 편안하며 풀베드나 하이브리드 크로스로 활용하기 좋습니다.">Smooth, all-around polyester with a more forgiving response than many firm control polys. Useful as a full bed or as a hybrid cross.</p>
+                  <span class="string-tag" data-en="All Around Poly" data-ko="범용 폴리">All Around Poly</span>
+                </div>
+              </article>
+
+              <article class="card string-card">
+                <img src="assets/weiss_ultra_cable.svg" alt="Weiss Cannon Ultra Cable">
+                <div class="string-body">
+                  <div class="string-meta">POLYESTER · 1.23 mm · SHAPED</div>
+                  <h3>Weiss Cannon Ultra Cable</h3>
+                  <p data-en="A shaped spin-focused poly for players looking for stronger ball bite and a more spin-oriented response." data-ko="더 강한 볼 바이트와 스핀 성향을 원하는 플레이어를 위한 쉐이프드 폴리입니다.">A shaped spin-focused poly for players looking for stronger ball bite and a more spin-oriented response.</p>
+                  <span class="string-tag" data-en="Spin Focus" data-ko="스핀 중심">Spin Focus</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </details>
+
+        <details class="panel">
+          <summary>
+            <div class="panel-summary-left">
+              <div class="panel-number">03</div>
+              <div>
+                <div class="panel-title" data-en="Stringing Machine" data-ko="스트링 머신">Stringing Machine</div>
+                <div class="panel-sub" data-en="The hardware behind the process" data-ko="작업 품질을 만드는 장비">The hardware behind the process</div>
+              </div>
+            </div>
+            <div class="chevron">+</div>
+          </summary>
+          <div class="panel-body">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow" data-en="The Setup" data-ko="장비">The Setup</div>
+                <h2 data-en="Built for repeatability." data-ko="재현성을 위한 세팅.">Built for repeatability.</h2>
+              </div>
+            </div>
+
+            <div class="machine">
+              <div class="card machine-main">
+                <div class="machine-kicker" data-en="Stringing Machine" data-ko="스트링 머신">Stringing Machine</div>
+                <div class="machine-title">Alpha Pioneer DC Plus Gravity</div>
+                <p class="sub" data-en="A manual constant-pull drop-weight platform with fixed clamps and six-point frame support. The emphasis is a controlled, repeatable pull-and-clamp process." data-ko="고정식 클램프와 6-point 프레임 서포트를 갖춘 수동 constant-pull 드롭웨이트 머신입니다. 빠른 작업보다 통제되고 반복 가능한 pull-and-clamp 과정을 중시합니다.">A manual constant-pull drop-weight platform with fixed clamps and six-point frame support. The emphasis is a controlled, repeatable pull-and-clamp process.</p>
+
+                <div class="machine-visual">
+                  <img src="assets/alpha_pioneer_dc_plus_gravity.png" alt="Alpha Pioneer DC Plus Gravity stringing machine">
+                </div>
+
+                <div class="specs">
+                  <div class="spec">
+                    <strong data-en="6-point mounting" data-ko="6-point 마운팅">6-point mounting</strong>
+                    <span data-en="Supports the frame at six contact points during tensioning." data-ko="스트링 작업 중 프레임을 여섯 지점에서 지지합니다.">Supports the frame at six contact points during tensioning.</span>
+                  </div>
+                  <div class="spec">
+                    <strong data-en="Fixed clamps" data-ko="고정식 클램프">Fixed clamps</strong>
+                    <span data-en="Each string is clamped independently rather than relying on floating-clamp geometry." data-ko="플로팅 클램프처럼 인접 스트링에 의존하지 않고 각 스트링을 독립적으로 고정합니다.">Each string is clamped independently rather than relying on floating-clamp geometry.</span>
+                  </div>
+                  <div class="spec">
+                    <strong data-en="Gravity-release bases" data-ko="Gravity-release 베이스">Gravity-release bases</strong>
+                    <span data-en="Quick clamp-base release for efficient repositioning between pulls." data-ko="당김이 끝난 뒤 클램프 베이스를 빠르게 해제하고 이동할 수 있습니다.">Quick clamp-base release for efficient repositioning between pulls.</span>
+                  </div>
+                  <div class="spec">
+                    <strong data-en="Linear gripper plus ratchet" data-ko="리니어 그리퍼 + 래칫">Linear gripper plus ratchet</strong>
+                    <span data-en="The string feeds straight into the gripper. As the string elongates, the gripper is held while the bar is re-indexed upward." data-ko="스트링이 직선으로 그리퍼에 들어갑니다. 스트링이 늘어나 바가 내려가면 그리퍼를 잡고 바만 위로 재설정합니다.">The string feeds straight into the gripper. As the string elongates, the gripper is held while the bar is re-indexed upward.</span>
+                  </div>
+                  <div class="spec">
+                    <strong data-en="Drop-weight constant pull" data-ko="드롭웨이트 constant pull">Drop-weight constant pull</strong>
+                    <span data-en="The weight continues responding to string elongation until the bar settles at the target position." data-ko="스트링이 늘어나는 동안 추가 움직임을 따라가며 바가 목표 위치에 안정될 때까지 장력을 유지합니다.">The weight continues responding to string elongation until the bar settles at the target position.</span>
+                  </div>
+                  <div class="spec">
+                    <strong data-en="Diamond-dusted clamp teeth" data-ko="다이아몬드 더스트 클램프">Diamond-dusted clamp teeth</strong>
+                    <span data-en="Designed for secure grip when clamp pressure is correctly adjusted." data-ko="클램프 압력을 적절히 조절하면 스트링 손상을 줄이면서 안정적으로 고정할 수 있습니다.">Designed for secure grip when clamp pressure is correctly adjusted.</span>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="card machine-side">
+                <div class="smallcaps" data-en="Why it matters" data-ko="왜 중요한가">Why it matters</div>
+                <div class="big" data-en="Consistency over speed." data-ko="속도보다 일관성.">Consistency over speed.</div>
+                <p data-en="Every main and cross is pulled individually. Clamp position, pull sequence, and timing are kept consistent so the same recipe can be reproduced from job to job." data-ko="메인과 크로스를 한 줄씩 개별적으로 당깁니다. 클램프 위치, pull 순서, 작업 리듬을 일정하게 유지해 같은 레시피를 반복할 수 있도록 합니다.">Every main and cross is pulled individually. Clamp position, pull sequence, and timing are kept consistent so the same recipe can be reproduced from job to job.</p>
+              </aside>
+            </div>
+          </div>
+        </details>
+
+
+        <details class="panel">
+          <summary>
+            <div class="panel-summary-left">
+              <div class="panel-number">04</div>
+              <div>
+                <div class="panel-title" data-en="Recent Work" data-ko="최근 작업">Recent Work</div>
+                <div class="panel-sub" data-en="A few racquets and selected setups" data-ko="최근 작업 사진과 세팅 기록">A few racquets and selected setups</div>
+              </div>
+            </div>
+            <div class="chevron">+</div>
+          </summary>
+          <div class="panel-body">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow" data-en="Recent Work" data-ko="최근 작업">Recent Work</div>
+                <h2 data-en="A look at the process." data-ko="실제 작업 모습과 세팅 기록.">A look at the process.</h2>
+                <p class="sub" data-en="A small archive of stringing work. Some photos are from earlier setups; current stringing is performed on the Alpha Pioneer DC Plus Gravity shown above." data-ko="실제 스트링 작업을 기록한 작은 아카이브입니다. 일부 사진은 이전 장비를 사용하던 시기의 작업이며, 현재는 위에서 소개한 Alpha Pioneer DC Plus Gravity로 작업합니다.">A small archive of stringing work. Some photos are from earlier setups; current stringing is performed on the Alpha Pioneer DC Plus Gravity shown above.</p>
+              </div>
+            </div>
+
+            <div class="work-gallery">
+              <figure class="work-photo">
+                <img src="assets/recent_work_mount.webp" alt="Racquet mounted on a stringing machine">
+                <figcaption data-en="Mounted racquet and finished stringbed inspection." data-ko="마운트된 라켓과 완성 스트링베드 점검.">Mounted racquet and finished stringbed inspection.</figcaption>
+              </figure>
+              <figure class="work-photo">
+                <img src="assets/recent_work_progress.webp" alt="Tennis racquet stringing in progress">
+                <figcaption data-en="Main-string installation in progress." data-ko="메인 스트링 작업 중.">Main-string installation in progress.</figcaption>
+              </figure>
+              <figure class="work-photo">
+                <img src="assets/recent_work_finished.webp" alt="Completed tennis racquet stringbed">
+                <figcaption data-en="Completed stringbed after final alignment and inspection." data-ko="최종 정렬과 점검을 마친 스트링베드.">Completed stringbed after final alignment and inspection.</figcaption>
+              </figure>
+            </div>
+
+            <div class="smallcaps" style="margin:18px 0 9px;" data-en="Selected Stringing Log" data-ko="작업 기록">Selected Stringing Log</div>
+            <div class="log-table-wrap">
+              <table class="log-table">
+                <thead>
+                  <tr>
+                    <th data-en="Date" data-ko="날짜">Date</th>
+                    <th data-en="Racquet" data-ko="라켓">Racquet</th>
+                    <th data-en="String" data-ko="스트링">String</th>
+                    <th data-en="Gauge" data-ko="게이지">Gauge</th>
+                    <th data-en="Reference Tension" data-ko="레퍼런스 텐션">Reference Tension</th>
+                    <th data-en="Setup" data-ko="세팅">Setup</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>07/19/2026</td>
+                    <td>Yonex EZONE 100L 2025</td>
+                    <td>HEAD Synthetic Gut</td>
+                    <td>1.25 mm</td>
+                    <td>52 / 52 lb</td>
+                    <td data-en="Full bed · comfort-focused baseline" data-ko="풀베드 · 편안함 중심의 기준 세팅">Full bed · comfort-focused baseline</td>
+                  </tr>
+                  <tr>
+                    <td>08/08/2026</td>
+                    <td>Yonex EZONE 100L 2025</td>
+                    <td>Weiss Cannon Ultra Cable</td>
+                    <td>1.23 mm</td>
+                    <td>48 / 48 lb</td>
+                    <td data-en="Full bed · shaped spin poly" data-ko="풀베드 · 쉐이프드 스핀 폴리">Full bed · shaped spin poly</td>
+                  </tr>
+                  <tr>
+                    <td>08/08/2026</td>
+                    <td>Wilson Shift v1 99 / 300</td>
+                    <td>Weiss Cannon Ultra Cable</td>
+                    <td>1.23 mm</td>
+                    <td>52 / 52 lb</td>
+                    <td data-en="Full bed · one-piece pattern" data-ko="풀베드 · 원피스 패턴">Full bed · one-piece pattern</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="log-note" data-en="Names and private customer notes are intentionally omitted. Reference tension is the machine setting, not the final tension of every individual string." data-ko="이름과 개인적인 고객 메모는 공개하지 않습니다. 레퍼런스 텐션은 머신 설정값이며, 완성 후 모든 개별 스트링의 실제 장력을 의미하지는 않습니다.">Names and private customer notes are intentionally omitted. Reference tension is the machine setting, not the final tension of every individual string.</div>
+          </div>
+        </details>
+
+        <details class="panel">
+          <summary>
+            <div class="panel-summary-left">
+              <div class="panel-number">05</div>
+              <div>
+                <div class="panel-title" data-en="Tennis and String Tips" data-ko="테니스 & 스트링 팁">Tennis and String Tips</div>
+                <div class="panel-sub" data-en="Restringing, tension, string choice, and care" data-ko="교체 시기, 텐션, 스트링 선택, 관리">Restringing, tension, string choice, and care</div>
+              </div>
+            </div>
+            <div class="chevron">+</div>
+          </summary>
+          <div class="panel-body">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow" data-en="Tennis and String Tips" data-ko="테니스 & 스트링 팁">Tennis and String Tips</div>
+                <h2 data-en="A few things worth knowing." data-ko="알아두면 좋은 몇 가지.">A few things worth knowing.</h2>
+                <p class="sub" data-en="Practical starting points, not absolute rules. Your racquet, string, playing style, and arm should ultimately guide the setup." data-ko="절대적인 규칙이라기보다 실용적인 시작점에 가깝습니다. 최종 세팅은 라켓, 스트링, 플레이 스타일, 그리고 팔의 편안함을 함께 봐야 합니다.">Practical starting points, not absolute rules. Your racquet, string, playing style, and arm should ultimately guide the setup.</p>
+              </div>
+            </div>
+
+            <div class="tips-grid">
+              <article class="card tip-card">
+                <div class="tip-icon">⏱</div>
+                <h3 data-en="Restring by playing hours" data-ko="날짜보다 플레이 시간을 기준으로">Restring by playing hours</h3>
+                <p data-en="Polyester can lose useful playability before it breaks. A practical starting point is to reassess a full-poly bed at roughly 15 to 20 on-court hours, then adjust based on control, spin, feel, notching, and arm comfort." data-ko="폴리에스터는 끊어지기 전에 플레이어빌리티가 먼저 떨어질 수 있습니다. 풀 폴리라면 약 15~20시간을 첫 점검 시점으로 삼고, 컨트롤·스핀·타구감·노칭·팔의 편안함에 따라 조정하는 것이 실용적입니다.">Polyester can lose useful playability before it breaks. A practical starting point is to reassess a full-poly bed at roughly 15 to 20 on-court hours, then adjust based on control, spin, feel, notching, and arm comfort.</p>
+                <table class="mini-table">
+                  <thead>
+                    <tr>
+                      <th data-en="Typical schedule" data-ko="플레이 패턴">Typical schedule</th>
+                      <th data-en="Poly check point" data-ko="폴리 점검 시점">Poly check point</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-en="2 h × 2 days per week" data-ko="2시간 × 주 2회">2 h × 2 days per week</td>
+                      <td data-en="about 4 to 5 weeks" data-ko="약 4~5주">about 4 to 5 weeks</td>
+                    </tr>
+                    <tr>
+                      <td data-en="2 h × 3 days per week" data-ko="2시간 × 주 3회">2 h × 3 days per week</td>
+                      <td data-en="about 2.5 to 3.5 weeks" data-ko="약 2.5~3.5주">about 2.5 to 3.5 weeks</td>
+                    </tr>
+                    <tr>
+                      <td data-en="2 h × 4 days per week" data-ko="2시간 × 주 4회">2 h × 4 days per week</td>
+                      <td data-en="about 2 to 2.5 weeks" data-ko="약 2~2.5주">about 2 to 2.5 weeks</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+
+              <article class="card tip-card">
+                <div class="tip-icon">🎾</div>
+                <h3 data-en="Choose the string for the player" data-ko="플레이어에 맞춰 스트링 선택">Choose the string for the player</h3>
+                <p data-en="Synthetic gut is a strong default for comfort and value. Polyester makes more sense for players who swing fast enough to benefit from its control and spin behavior. A hybrid can split the difference." data-ko="신세틱 거트는 편안함과 가성비 측면에서 좋은 기본값입니다. 폴리에스터는 충분한 스윙 스피드로 컨트롤과 스핀 특성을 활용할 수 있는 플레이어에게 더 적합합니다. 하이브리드는 그 중간 지점을 만들 수 있습니다.">Synthetic gut is a strong default for comfort and value. Polyester makes more sense for players who swing fast enough to benefit from its control and spin behavior. A hybrid can split the difference.</p>
+              </article>
+
+              <article class="card tip-card">
+                <div class="tip-icon">↕</div>
+                <h3 data-en="Tension is a recipe, not a measurement" data-ko="텐션은 측정값이 아니라 레시피">Tension is a recipe, not a measurement</h3>
+                <p data-en="The number on the machine is reference tension. It is not the final tension of every individual string. Start within the racquet manufacturer's recommended range and adjust in small steps from a known baseline." data-ko="머신에 설정하는 숫자는 reference tension입니다. 완성 후 모든 개별 스트링이 그 숫자를 그대로 갖는다는 뜻은 아닙니다. 라켓 제조사의 권장 범위 안에서 시작한 뒤, 익숙한 기준값에서 작은 폭으로 조정하는 것이 좋습니다.">The number on the machine is reference tension. It is not the final tension of every individual string. Start within the racquet manufacturer's recommended range and adjust in small steps from a known baseline.</p>
+              </article>
+
+              <article class="card tip-card">
+                <div class="tip-icon">↔</div>
+                <h3 data-en="Synthetic gut can move and may need straightening" data-ko="신세틱 거트는 움직일 수 있어 손으로 정렬해줄 수 있습니다">Synthetic gut can move and may need straightening</h3>
+                <p data-en="Nylon strings often show visible string movement after play. That does not automatically mean the string job is bad. If the strings are still in good condition, occasional realignment by hand is normal." data-ko="나일론 계열 스트링은 플레이 후 스트링 위치가 눈에 띄게 흐트러질 수 있습니다. 그렇다고 해서 스트링 작업이 잘못되었다는 뜻은 아닙니다. 상태가 괜찮다면 손으로 가볍게 다시 정렬해주는 것이 자연스러운 관리 방법입니다.">Nylon strings often show visible string movement after play. That does not automatically mean the string job is bad. If the strings are still in good condition, occasional realignment by hand is normal.</p>
+              </article>
+
+              <article class="card tip-card">
+                <div class="tip-icon">◎</div>
+                <h3 data-en="Gauge changes more than durability" data-ko="게이지는 내구성만 바꾸지 않습니다">Gauge changes more than durability</h3>
+                <p data-en="Thicker strings generally favor durability. Thinner gauges can change feel, bite, and response, but thinner does not always mean softer because material and construction also matter." data-ko="굵은 스트링은 일반적으로 내구성에 유리합니다. 얇은 게이지는 타구감, 볼 바이트, 반응을 바꿀 수 있지만, 재료와 구조도 영향을 주기 때문에 얇다고 해서 항상 더 부드러운 것은 아닙니다.">Thicker strings generally favor durability. Thinner gauges can change feel, bite, and response, but thinner does not always mean softer because material and construction also matter.</p>
+              </article>
+
+              <article class="card tip-card">
+                <div class="tip-icon">☀</div>
+                <h3 data-en="Heat is not your friend" data-ko="고온 보관은 피하는 것이 좋습니다">Heat is not your friend</h3>
+                <p data-en="Avoid leaving a strung racquet in a hot car for long periods. Temperature can affect strings and tension, and extreme heat is unnecessary stress for both the stringbed and the frame." data-ko="스트링된 라켓을 뜨거운 차 안에 장시간 두지 않는 것이 좋습니다. 온도는 스트링과 장력에 영향을 줄 수 있고, 극단적인 열은 스트링베드와 프레임 모두에 불필요한 부담이 됩니다.">Avoid leaving a strung racquet in a hot car for long periods. Temperature can affect strings and tension, and extreme heat is unnecessary stress for both the stringbed and the frame.</p>
+              </article>
+
+              <article class="card tip-card">
+                <div class="tip-icon">✂</div>
+                <h3 data-en="Do not wait for breakage" data-ko="끊어질 때까지 기다릴 필요는 없습니다">Do not wait for breakage</h3>
+                <p data-en="Loss of control, reduced spin, a dead or harsh response, deep notching, or obvious fraying can all justify restringing before the string actually snaps." data-ko="컨트롤 저하, 스핀 감소, 죽거나 딱딱해진 느낌, 깊은 노칭, 뚜렷한 마모가 있다면 실제 단선 전에 교체할 이유가 충분합니다.">Loss of control, reduced spin, a dead or harsh response, deep notching, or obvious fraying can all justify restringing before the string actually snaps.</p>
+              </article>
+
+              <article class="card tip-card">
+                <div class="tip-icon">🏆</div>
+                <h3 data-en="Before an important match" data-ko="중요한 경기 전에는">Before an important match</h3>
+                <p data-en="If you already know a setup you trust, restring early enough to get one or two practice sessions on it. A tournament is usually not the best time to introduce an unfamiliar string or tension." data-ko="이미 믿고 쓰는 세팅이 있다면 경기 전에 1~2회 연습할 시간을 남기고 교체하는 편이 좋습니다. 중요한 대회 직전에 처음 쓰는 스트링이나 텐션을 시험하는 것은 대체로 좋은 선택이 아닙니다.">If you already know a setup you trust, restring early enough to get one or two practice sessions on it. A tournament is usually not the best time to introduce an unfamiliar string or tension.</p>
+              </article>
+
+              <article class="card tip-card full">
+                <div class="tip-icon">?</div>
+                <h3 data-en="Quick myths" data-ko="빠른 오해 정리">Quick myths</h3>
+
+                <div class="myth">
+                  <strong data-en="Lower tension means dramatically more power." data-ko="텐션을 낮추면 파워가 엄청 늘어난다.">Lower tension means dramatically more power.</strong>
+                  <span data-en="Usually overstated. Tension can noticeably change feel, launch angle, dwell time, and confidence even when the measured ball-speed difference is fairly modest." data-ko="대개 과장된 표현입니다. 실제 볼 스피드 차이가 크지 않더라도 타구감, launch angle, dwell time, 스윙에 대한 자신감은 충분히 달라질 수 있습니다.">Usually overstated. Tension can noticeably change feel, launch angle, dwell time, and confidence even when the measured ball-speed difference is fairly modest.</span>
+                </div>
+
+                <div class="myth">
+                  <strong data-en="A shaped string automatically creates more spin." data-ko="각진 스트링이면 자동으로 스핀이 많다.">A shaped string automatically creates more spin.</strong>
+                  <span data-en="Not by shape alone. Ball-to-string friction, string-to-string friction, lateral movement, and snap-back all matter." data-ko="형상만으로 결정되지는 않습니다. 공과 스트링의 마찰, 스트링끼리의 마찰, lateral movement, snap-back이 모두 중요합니다.">Not by shape alone. Ball-to-string friction, string-to-string friction, lateral movement, and snap-back all matter.</span>
+                </div>
+
+                <div class="myth">
+                  <strong data-en="If it has not broken, it is still fine." data-ko="안 끊어졌으면 아직 멀쩡하다.">If it has not broken, it is still fine.</strong>
+                  <span data-en="Not necessarily, especially with polyester. Playability can deteriorate well before breakage." data-ko="특히 폴리에스터에서는 그렇지 않을 수 있습니다. 단선보다 훨씬 먼저 플레이어빌리티가 저하될 수 있습니다.">Not necessarily, especially with polyester. Playability can deteriorate well before breakage.</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="card refs">
+              <details>
+                <summary data-en="References and further reading" data-ko="참고문헌 및 더 읽어보기">References and further reading</summary>
+                <ol>
+                  <li>Brody H, Cross R, Lindsey C. <em>The Physics and Technology of Tennis.</em> Racquet Tech Publishing / USRSA; 2002.</li>
+                  <li>Wilson. <em>How Often Should I Re-String My Tennis Racket?</em></li>
+                  <li>Tennis Warehouse. <em>Tennis Strings Explained: Material, Gauge, Tension and When to Restring.</em></li>
+                  <li>Tennis Warehouse University. <em>String Spin Potential Tool.</em></li>
+                </ol>
+              </details>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 0 12px;">
+    <div class="wrap">
+      <div class="card" style="padding:22px 24px;background:var(--ink);color:#fff;">
+        <div class="smallcaps" style="color:#d6d2ca;" data-en="Contact" data-ko="문의">Contact</div>
+        <div style="font-size:clamp(24px,3vw,34px);font-weight:900;letter-spacing:-.03em;margin:7px 0 6px;" data-en="Questions or stringing requests?" data-ko="문의나 스트링 요청이 있으신가요?">Questions or stringing requests?</div>
+        <p style="margin:0;color:#d6d2ca;" data-en="Please message me on KakaoTalk: injulboy" data-ko="카카오톡으로 연락해 주세요: injulboy">Please message me on KakaoTalk: injulboy</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footerline">
+    <div>
+      <strong>CHAPEL 900</strong><br>
+      <span data-en="Racquet Stringing · New Haven, CT" data-ko="라켓 스트링 서비스 · New Haven, CT">Racquet Stringing · New Haven, CT</span>
+    </div>
+    <div data-en="Independent local stringing · YKTS member pricing available" data-ko="독립 로컬 스트링 서비스 · YKTS 회원가 제공">Independent local stringing · YKTS member pricing available</div>
+  </div>
+</footer>
+
+<script>
+const enBtn = document.getElementById("enBtn");
+const koBtn = document.getElementById("koBtn");
+function setLanguage(lang){
+  document.documentElement.lang = lang === "ko" ? "ko" : "en";
+  document.querySelectorAll("[data-en]").forEach(el => {
+    el.innerHTML = lang === "ko" ? el.getAttribute("data-ko") : el.getAttribute("data-en");
+  });
+  enBtn.classList.toggle("active", lang === "en");
+  koBtn.classList.toggle("active", lang === "ko");
+  localStorage.setItem("chapel900-lang", lang);
+}
+enBtn.addEventListener("click", () => setLanguage("en"));
+koBtn.addEventListener("click", () => setLanguage("ko"));
+
+const publicBtn = document.getElementById("publicBtn");
+const memberBtn = document.getElementById("memberBtn");
+const prices = document.querySelectorAll(".price[data-public]");
+function setPrice(mode){
+  prices.forEach(el => el.textContent = el.dataset[mode]);
+  publicBtn.classList.toggle("active", mode === "public");
+  memberBtn.classList.toggle("active", mode === "member");
+}
+publicBtn.addEventListener("click", () => setPrice("public"));
+memberBtn.addEventListener("click", () => setPrice("member"));
+
+const savedLang = localStorage.getItem("chapel900-lang");
+if(savedLang === "ko"){ setLanguage("ko"); }
+</script>
+</body>
+</html>
