@@ -183,8 +183,9 @@ html[lang="ko"] .string-meta{letter-spacing:.04em}
   text-underline-offset:2px;
 }
 
-.machine{display:grid;grid-template-columns:1.1fr .9fr;gap:12px;align-items:start}
+.machine{display:grid;grid-template-columns:1.08fr .92fr;gap:12px;align-items:start}
 .machine-main{padding:24px;background:var(--soft2)}
+.machine-right{display:grid;gap:12px;align-content:start;align-self:start}
 .machine-kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:850}
 html[lang="ko"] .machine-kicker{letter-spacing:.05em}
 .machine-title{font-size:clamp(28px,4vw,44px);letter-spacing:-.04em;margin:8px 0 12px;line-height:1.04}
@@ -194,10 +195,11 @@ html[lang="ko"] .machine-kicker{letter-spacing:.05em}
   border:1px solid var(--line)
 }
 .specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:18px}
+.machine-right .specs{margin-top:0}
 .spec{padding:15px;border-radius:14px;background:#fff;border:1px solid var(--line)}
 .spec strong{display:block;margin-bottom:4px}
 .spec span{font-size:13px;color:#605d57}
-.machine-side{padding:24px;background:var(--ink);color:#fff;border-color:var(--ink)}
+.machine-side{padding:24px;background:var(--ink);color:#fff;border-color:var(--ink);align-self:start;height:auto}
 .machine-side p{color:#d6d2ca}
 .machine-side .big{font-size:33px;font-weight:900;letter-spacing:-.04em;line-height:1.05;margin:10px 0}
 .tips-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
@@ -632,6 +634,15 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
                   <img src="assets/alpha_pioneer_dc_plus_gravity.png" alt="Alpha Pioneer DC Plus Gravity stringing machine">
                 </div>
 
+              </div>
+
+              <div class="machine-right">
+                <aside class="card machine-side">
+                <div class="smallcaps" data-en="Why it matters" data-ko="왜 중요한가">Why it matters</div>
+                <div class="big" data-en="Consistency over speed." data-ko="속도보다 일관성.">Consistency over speed.</div>
+                <p data-en="Every main and cross is pulled individually. Clamp position, pull sequence, and timing are kept consistent so the same recipe can be reproduced from job to job." data-ko="메인과 크로스를 한 줄씩 개별적으로 당깁니다. 클램프 위치, pull 순서, 작업 리듬을 일정하게 유지해 같은 레시피를 반복할 수 있도록 합니다.">Every main and cross is pulled individually. Clamp position, pull sequence, and timing are kept consistent so the same recipe can be reproduced from job to job.</p>
+                </aside>
+
                 <div class="specs">
                   <div class="spec">
                     <strong data-en="6-point mounting" data-ko="6-point 마운팅">6-point mounting</strong>
@@ -658,13 +669,8 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
                     <span data-en="Designed for secure grip when clamp pressure is correctly adjusted." data-ko="클램프 압력을 적절히 조절하면 스트링 손상을 줄이면서 안정적으로 고정할 수 있습니다.">Designed for secure grip when clamp pressure is correctly adjusted.</span>
                   </div>
                 </div>
+                </div>
               </div>
-
-              <aside class="card machine-side">
-                <div class="smallcaps" data-en="Why it matters" data-ko="왜 중요한가">Why it matters</div>
-                <div class="big" data-en="Consistency over speed." data-ko="속도보다 일관성.">Consistency over speed.</div>
-                <p data-en="Every main and cross is pulled individually. Clamp position, pull sequence, and timing are kept consistent so the same recipe can be reproduced from job to job." data-ko="메인과 크로스를 한 줄씩 개별적으로 당깁니다. 클램프 위치, pull 순서, 작업 리듬을 일정하게 유지해 같은 레시피를 반복할 수 있도록 합니다.">Every main and cross is pulled individually. Clamp position, pull sequence, and timing are kept consistent so the same recipe can be reproduced from job to job.</p>
-              </aside>
             </div>
           </div>
         </details>
