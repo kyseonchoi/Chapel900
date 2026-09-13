@@ -142,6 +142,47 @@ html[lang="ko"] h2{line-height:1.18}
 html[lang="ko"] .string-meta{letter-spacing:.04em}
 .string-card p,.tip-card p,.machine-main p,.machine-side p{color:#55514b;margin:9px 0 0}
 .string-tag{display:inline-block;margin-top:15px;border:1px solid var(--line);border-radius:999px;padding:6px 9px;font-size:12px;font-weight:850;background:#fff}
+
+.string-traits{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:14px;
+}
+.trait{
+  display:inline-flex;
+  align-items:center;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:6px 9px;
+  background:#fff;
+  color:#4f4c47;
+  font-size:11px;
+  font-weight:800;
+}
+.trait.hero-trait{
+  background:var(--ink);
+  color:#fff;
+  border-color:var(--ink);
+}
+.string-best{
+  margin-top:14px;
+  padding-top:13px;
+  border-top:1px solid var(--line);
+  font-size:13px;
+  color:#55514b;
+}
+.string-best strong{color:var(--ink)}
+.string-source{
+  margin-top:11px;
+  font-size:11px;
+  color:var(--muted);
+}
+.string-source a{
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+
 .machine{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}
 .machine-main{padding:24px;background:var(--soft2)}
 .machine-kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:850}
@@ -427,7 +468,7 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
                   <tr>
                     <td data-en="More spin and bite" data-ko="더 많은 스핀과 볼 바이트">More spin and bite</td>
                     <td>Weiss Cannon Ultra Cable</td>
-                    <td data-en="A shaped poly for players who actively use topspin and want a more spin-oriented response." data-ko="탑스핀을 적극적으로 사용하는 플레이어가 더 강한 볼 바이트와 스핀 성향을 원할 때 적합합니다.">A shaped poly for players who actively use topspin and want a more spin-oriented response.</td>
+                    <td data-en="TWU currently ranks it No. 1 for spin potential (11.9). Best suited to players who actively use topspin and want maximum bite and control." data-ko="TWU 기준 Spin Potential 11.9로 현재 1위입니다. 탑스핀을 적극적으로 사용하며 강한 볼 바이트와 컨트롤을 원하는 플레이어에게 적합합니다.">TWU currently ranks it No. 1 for spin potential (11.9). Best suited to players who actively use topspin and want maximum bite and control.</td>
                   </tr>
                   <tr>
                     <td data-en="Poly feel with more comfort" data-ko="폴리 느낌은 유지하면서 더 편안하게">Poly feel with more comfort</td>
@@ -440,34 +481,124 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
 
             <div class="grid3">
               <article class="card string-card">
-                <img src="assets/head_synthetic_gut.svg" alt="HEAD Synthetic Gut">
+                <img
+                  src="https://cdn-mdb.head.com/CDN3/D/281311_BK/1/683x911/synthetic-gut-200m-reel-black.webp"
+                  onerror="this.onerror=null;this.src='assets/head_synthetic_gut.svg';"
+                  alt="HEAD Synthetic Gut 200m black reel"
+                  loading="lazy">
                 <div class="string-body">
-                  <div class="string-meta">NYLON · 17G</div>
+                  <div class="string-meta">NYLON · 17G / 1.25 mm · ROUND</div>
                   <h3>HEAD Synthetic Gut</h3>
-                  <p data-en="Comfort-oriented and budget-friendly. A sensible choice for recreational players who do not need a full polyester bed." data-ko="편안함과 가성비가 중심입니다. 풀 폴리에스터가 꼭 필요하지 않은 레크리에이션 플레이어에게 무난한 선택입니다.">Comfort-oriented and budget-friendly. A sensible choice for recreational players who do not need a full polyester bed.</p>
-                  <span class="string-tag" data-en="Comfort / Value" data-ko="편안함 / 가성비">Comfort / Value</span>
+                  <p
+                    data-en="A comfortable, durable and economical all-around option for club and recreational players. HEAD classifies the current string as a round multifilament construction."
+                    data-ko="편안함, 내구성, 가성비를 균형 있게 갖춘 클럽·레크리에이션용 스트링입니다. HEAD는 현재 제품을 라운드형 멀티필라멘트 구조로 분류합니다.">
+                    A comfortable, durable and economical all-around option for club and recreational players. HEAD classifies the current string as a round multifilament construction.
+                  </p>
+
+                  <div class="string-traits">
+                    <span class="trait hero-trait" data-en="Comfort + Value" data-ko="편안함 + 가성비">Comfort + Value</span>
+                    <span class="trait" data-en="Round profile" data-ko="라운드 프로파일">Round profile</span>
+                    <span class="trait" data-en="Multifilament" data-ko="멀티필라멘트">Multifilament</span>
+                    <span class="trait" data-en="Club-player friendly" data-ko="클럽 플레이어 친화적">Club-player friendly</span>
+                  </div>
+
+                  <div class="string-best">
+                    <strong data-en="Best for:" data-ko="추천 대상:">Best for:</strong>
+                    <span data-en=" comfort, value, moderate swing speeds, and players who do not need a full polyester bed."
+                          data-ko=" 편안함과 가성비를 우선하거나, 풀 폴리에스터가 꼭 필요하지 않은 플레이어.">
+                      comfort, value, moderate swing speeds, and players who do not need a full polyester bed.
+                    </span>
+                  </div>
+
+                  <div class="string-source">
+                    <a href="https://www.head.com/en_US/product/synthetic-gut-281111" target="_blank" rel="noopener"
+                       data-en="Source: HEAD product specifications" data-ko="출처: HEAD 제품 사양">Source: HEAD product specifications</a>
+                  </div>
                 </div>
               </article>
 
               <article class="card string-card">
-                <img src="assets/yonex_polytour_pro.svg" alt="Yonex POLYTOUR PRO">
+                <img
+                  src="https://us.yonex.com/cdn/shop/files/PTP125-2_Graphite_1.png?v=1765003284&width=1445"
+                  onerror="this.onerror=null;this.src='assets/yonex_polytour_pro.svg';"
+                  alt="Yonex POLYTOUR PRO 125 Graphite 200m reel"
+                  loading="lazy">
                 <div class="string-body">
-                  <div class="string-meta">POLYESTER · 1.25 mm · ROUND</div>
+                  <div class="string-meta">POLYESTER · 16L / 1.25 mm · ROUND MONOFILAMENT</div>
                   <h3>Yonex POLYTOUR PRO</h3>
-                  <p data-en="Smooth, all-around polyester with a more forgiving response than many firm control polys. Useful as a full bed or as a hybrid cross." data-ko="매끄러운 라운드 타입의 범용 폴리에스터입니다. 단단한 컨트롤 폴리보다 비교적 편안하며 풀베드나 하이브리드 크로스로 활용하기 좋습니다.">Smooth, all-around polyester with a more forgiving response than many firm control polys. Useful as a full bed or as a hybrid cross.</p>
-                  <span class="string-tag" data-en="All Around Poly" data-ko="범용 폴리">All Around Poly</span>
+                  <p
+                    data-en="Yonex positions POLYTOUR PRO as a soft, all-around polyester with solid power, spin and comfort. The current 1.25 mm reel also lists SIF technology."
+                    data-ko="Yonex가 부드럽고 범용성이 높은 폴리에스터로 소개하는 제품입니다. 파워·스핀·편안함의 균형을 목표로 하며, 현재 1.25 mm 릴에는 SIF 기술이 적용되어 있습니다.">
+                    Yonex positions POLYTOUR PRO as a soft, all-around polyester with solid power, spin and comfort. The current 1.25 mm reel also lists SIF technology.
+                  </p>
+
+                  <div class="string-traits">
+                    <span class="trait hero-trait" data-en="Soft All-Around Poly" data-ko="부드러운 범용 폴리">Soft All-Around Poly</span>
+                    <span class="trait" data-en="Round monofilament" data-ko="라운드 모노필라멘트">Round monofilament</span>
+                    <span class="trait" data-en="Power + Spin + Comfort" data-ko="파워 + 스핀 + 편안함">Power + Spin + Comfort</span>
+                    <span class="trait" data-en="SIF technology" data-ko="SIF 기술">SIF technology</span>
+                  </div>
+
+                  <div class="string-best">
+                    <strong data-en="Best for:" data-ko="추천 대상:">Best for:</strong>
+                    <span data-en=" players who want a versatile poly for a full bed or a smooth poly cross in a hybrid."
+                          data-ko=" 풀베드용으로 무난한 폴리를 원하거나, 하이브리드에서 매끄러운 폴리 크로스를 원하는 플레이어.">
+                      players who want a versatile poly for a full bed or a smooth poly cross in a hybrid.
+                    </span>
+                  </div>
+
+                  <div class="string-source">
+                    <a href="https://us.yonex.com/products/polytour-pro-125-reel" target="_blank" rel="noopener"
+                       data-en="Source: Yonex USA product specifications" data-ko="출처: Yonex USA 제품 사양">Source: Yonex USA product specifications</a>
+                  </div>
                 </div>
               </article>
 
               <article class="card string-card">
-                <img src="assets/weiss_ultra_cable.svg" alt="Weiss Cannon Ultra Cable">
+                <img
+                  src="https://img.tenniswarehouse-europe.com/watermark/rs.php?nw=455&path=WCUC17B-1.jpg"
+                  onerror="this.onerror=null;this.src='assets/weiss_ultra_cable.svg';"
+                  alt="Weiss Cannon Ultra Cable 1.23 black 200m reel"
+                  loading="lazy">
                 <div class="string-body">
-                  <div class="string-meta">POLYESTER · 1.23 mm · SHAPED</div>
+                  <div class="string-meta">CO-POLYESTER · 17G / 1.23 mm · SQUARE</div>
                   <h3>Weiss Cannon Ultra Cable</h3>
-                  <p data-en="A shaped spin-focused poly for players looking for stronger ball bite and a more spin-oriented response." data-ko="더 강한 볼 바이트와 스핀 성향을 원하는 플레이어를 위한 쉐이프드 폴리입니다.">A shaped spin-focused poly for players looking for stronger ball bite and a more spin-oriented response.</p>
-                  <span class="string-tag" data-en="Spin Focus" data-ko="스핀 중심">Spin Focus</span>
+                  <p
+                    data-en="A firm, low-powered square co-poly built around spin and control. Its sharp four-sided profile provides strong ball bite, while its string-to-string behavior produces exceptional spin potential."
+                    data-ko="스핀과 컨트롤에 초점을 둔 단단하고 저출력 성향의 사각형 코폴리입니다. 네 개의 날카로운 엣지가 볼 바이트를 높이고, 스트링 간 마찰 특성까지 더해 매우 높은 스핀 잠재력을 보입니다.">
+                    A firm, low-powered square co-poly built around spin and control. Its sharp four-sided profile provides strong ball bite, while its string-to-string behavior produces exceptional spin potential.
+                  </p>
+
+                  <div class="string-traits">
+                    <span class="trait hero-trait" data-en="TWU #1 Spin Potential" data-ko="TWU 스핀 포텐셜 1위">TWU #1 Spin Potential</span>
+                    <span class="trait">SP 11.9</span>
+                    <span class="trait" data-en="TW Playtest: Spin 95" data-ko="TW 플레이테스트: 스핀 95">TW Playtest: Spin 95</span>
+                    <span class="trait" data-en="TW Playtest: Control 95" data-ko="TW 플레이테스트: 컨트롤 95">TW Playtest: Control 95</span>
+                  </div>
+
+                  <div class="string-best">
+                    <strong data-en="Best for:" data-ko="추천 대상:">Best for:</strong>
+                    <span data-en=" faster, spin-oriented swings and players who generate their own pace and want maximum bite and control."
+                          data-ko=" 스윙 스피드가 빠르고 스핀을 적극적으로 사용하며, 자체 파워를 만들 수 있는 플레이어.">
+                      faster, spin-oriented swings and players who generate their own pace and want maximum bite and control.
+                    </span>
+                  </div>
+
+                  <div class="string-source">
+                    <a href="https://twu.tennis-warehouse.com/learning_center/spinpotentialtool.php" target="_blank" rel="noopener"
+                       data-en="TWU lab: Spin Potential 11.9, currently ranked No. 1" data-ko="TWU 실험실: Spin Potential 11.9, 현재 1위">TWU lab: Spin Potential 11.9, currently ranked No. 1</a>
+                    <br>
+                    <a href="https://www.tennis-warehouse.com/learning_center/string_reviews/WCUC17review.html" target="_blank" rel="noopener"
+                       data-en="Tennis Warehouse playtest: Spin 95 / Control 95" data-ko="Tennis Warehouse 플레이테스트: 스핀 95 / 컨트롤 95">Tennis Warehouse playtest: Spin 95 / Control 95</a>
+                  </div>
                 </div>
               </article>
+            </div>
+
+            <div class="log-note" style="margin-top:12px;"
+                 data-en="Product specifications are based on current manufacturer pages; Ultra Cable performance rankings are from Tennis Warehouse University. Product images are displayed from the corresponding manufacturer or retailer pages."
+                 data-ko="제품 사양은 현재 제조사 페이지를 기준으로 정리했으며, Ultra Cable의 성능 순위는 Tennis Warehouse University 자료를 사용했습니다. 제품 이미지는 해당 제조사 또는 판매처 페이지의 이미지를 표시합니다.">
+              Product specifications are based on current manufacturer pages; Ultra Cable performance rankings are from Tennis Warehouse University. Product images are displayed from the corresponding manufacturer or retailer pages.
             </div>
           </div>
         </details>
