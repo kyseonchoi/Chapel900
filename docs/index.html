@@ -340,7 +340,7 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
       <p class="explore-intro" data-en="Choose a section below. Each panel opens only when you need it." data-ko="아래 항목을 눌러 필요한 정보만 펼쳐보세요.">Choose a section below. Each panel opens only when you need it.</p>
       <div class="accordion-stack">
 
-        <details class="panel" open>
+        <details class="panel">
           <summary>
             <div class="panel-summary-left">
               <div class="panel-number">01</div>
@@ -912,7 +912,6 @@ function setLanguage(lang){
   });
   enBtn.classList.toggle("active", lang === "en");
   koBtn.classList.toggle("active", lang === "ko");
-  localStorage.setItem("chapel900-lang", lang);
 }
 enBtn.addEventListener("click", () => setLanguage("en"));
 koBtn.addEventListener("click", () => setLanguage("ko"));
@@ -928,8 +927,7 @@ function setPrice(mode){
 publicBtn.addEventListener("click", () => setPrice("public"));
 memberBtn.addEventListener("click", () => setPrice("member"));
 
-const savedLang = localStorage.getItem("chapel900-lang");
-if(savedLang === "ko"){ setLanguage("ko"); }
+setLanguage("en");
 </script>
 </body>
 </html>
