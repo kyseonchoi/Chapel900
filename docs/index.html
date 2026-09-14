@@ -313,8 +313,7 @@ html[lang="ko"] .machine-kicker{letter-spacing:.05em}
 .mini-table th{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
 html[lang="ko"] .mini-table th{letter-spacing:.04em}
 .refs{padding:18px 20px;background:var(--soft2);margin-top:12px}
-.refs details summary{padding:0;display:block;font-weight:850;cursor:pointer}
-.refs details[open] summary{margin-bottom:10px}
+.refs-title{display:block;font-weight:850;margin-bottom:10px}
 .refs ol{padding-left:21px;color:#56524c;font-size:13px}
 .refs li{margin:8px 0}
 .myth{display:grid;grid-template-columns:220px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--line)}
@@ -1053,15 +1052,13 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
             </div>
 
             <div class="card refs">
-              <details>
-                <summary data-en="References and further reading" data-ko="참고문헌 및 더 읽어보기">References and further reading</summary>
-                <ol>
-                  <li>Brody H, Cross R, Lindsey C. <em>The Physics and Technology of Tennis.</em> Racquet Tech Publishing / USRSA; 2002.</li>
-                  <li>Wilson. <em>How Often Should I Re-String My Tennis Racket?</em></li>
-                  <li>Tennis Warehouse. <em>Tennis Strings Explained: Material, Gauge, Tension and When to Restring.</em></li>
-                  <li>Tennis Warehouse University. <em>String Spin Potential Tool.</em></li>
-                </ol>
-              </details>
+              <div class="refs-title" data-en="References and further reading" data-ko="참고문헌 및 더 읽어보기">References and further reading</div>
+              <ol>
+                <li>Brody H, Cross R, Lindsey C. <em>The Physics and Technology of Tennis.</em> Racquet Tech Publishing / USRSA; 2002.</li>
+                <li>Wilson. <em>How Often Should I Re-String My Tennis Racket?</em></li>
+                <li>Tennis Warehouse. <em>Tennis Strings Explained: Material, Gauge, Tension and When to Restring.</em></li>
+                <li>Tennis Warehouse University. <em>String Spin Potential Tool.</em></li>
+              </ol>
             </div>
           </div>
         </details>
