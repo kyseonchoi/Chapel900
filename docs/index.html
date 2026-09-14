@@ -47,12 +47,15 @@ nav{
   display:flex;align-items:center;justify-content:space-between;gap:18px;
 }
 .brand{
-  display:flex;align-items:center;gap:12px;
+  display:flex;align-items:center;gap:10px;
   text-decoration:none;font-weight:850;letter-spacing:.02em;
 }
-.mark{
-  width:42px;height:42px;border:2px solid var(--ink);border-radius:50%;
-  display:grid;place-items:center;font-size:13px;font-weight:900;
+.brand-logo{
+  width:76px;
+  height:48px;
+  object-fit:contain;
+  display:block;
+  flex:0 0 auto;
 }
 .nav-actions{display:flex;gap:10px;align-items:center}
 .toggle{
@@ -391,6 +394,7 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
   .myth{grid-template-columns:1fr;gap:6px}
 }
 @media(max-width:720px){
+  .brand-logo{width:64px;height:42px}
   .panel summary{padding:20px 20px;min-height:92px;gap:18px}
   .panel-summary-left{grid-template-columns:38px minmax(0,1fr);column-gap:14px}
   .panel-number{width:38px;height:38px;font-size:11px}
@@ -411,13 +415,14 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
   .panel summary,.chevron,.panel[open] .panel-body{transition:none;animation:none}
 }
 </style>
+  <link rel="icon" type="image/png" href="assets/c900_favicon.png">
 </head>
 <body>
 <header>
   <div class="wrap">
     <nav>
       <a class="brand" href="#top">
-        <span class="mark">C900</span>
+        <img class="brand-logo" src="assets/c900_logo_header.png" alt="C900 logo">
         <span>CHAPEL 900</span>
       </a>
       <div class="nav-actions">
