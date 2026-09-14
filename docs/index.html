@@ -87,42 +87,82 @@ html[lang="ko"] h1{line-height:1.08;letter-spacing:-.03em}
 }
 .explore{padding:18px 0 60px}
 .explore-intro{margin:0 0 18px;color:var(--muted);font-size:14px}
-.accordion-stack{display:grid;gap:14px}
+.accordion-stack{display:grid;gap:16px}
 .panel{
   background:var(--card);border:1px solid var(--line);border-radius:var(--r);
   box-shadow:var(--shadow);overflow:hidden
 }
 .panel summary{
   list-style:none;cursor:pointer;padding:24px 26px;
-  display:flex;align-items:center;justify-content:space-between;gap:22px;
+  min-height:104px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
   user-select:none
 }
 .panel summary::-webkit-details-marker{display:none}
-.panel-summary-left{display:flex;align-items:center;gap:16px;min-width:0}
+.panel-summary-left{
+  display:grid;
+  grid-template-columns:42px minmax(0,1fr);
+  align-items:center;
+  column-gap:16px;
+  min-width:0;
+  flex:1 1 auto
+}
+.summary-copy{
+  min-height:56px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
 .panel-number{
   width:42px;height:42px;border-radius:50%;background:var(--ink);color:#fff;
   display:grid;place-items:center;font-size:12px;font-weight:900;letter-spacing:.07em;flex:0 0 auto
 }
 .panel-title{
-  font-size:clamp(22px,3vw,34px);font-weight:900;letter-spacing:-.03em;line-height:1.08
+  font-size:clamp(22px,3vw,34px);font-weight:900;letter-spacing:-.03em;line-height:1.08;
+  margin:0
 }
-.panel-sub{color:var(--muted);font-size:13px;margin-top:4px}
+.panel-sub{
+  color:var(--muted);font-size:13px;line-height:1.45;
+  margin-top:5px; margin-bottom:0
+}
 .chevron{
-  width:34px;height:34px;border-radius:50%;background:var(--soft);
-  display:grid;place-items:center;font-size:20px;transition:transform .22s ease
+  width:38px;height:38px;border-radius:50%;background:var(--soft);
+  display:grid;place-items:center;font-size:21px;transition:transform .22s ease;
+  flex:0 0 38px; align-self:center
 }
 .panel[open] .chevron{transform:rotate(45deg)}
-.panel-body{padding:0 26px 28px;border-top:1px solid var(--line)}
+.panel summary,
+.chevron{
+  transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease;
+}
+.panel summary:hover{
+  background:rgba(20,20,18,.025);
+}
+.panel summary:hover .chevron{
+  background:#e7e2d8;
+  transform:scale(1.05);
+}
+.panel[open] summary:hover .chevron{
+  transform:rotate(45deg) scale(1.05);
+}
+.panel[open] .panel-body{
+  animation:panelReveal .24s ease both;
+}
+@keyframes panelReveal{
+  from{opacity:0;transform:translateY(-6px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.panel-body{padding:0 26px 30px;border-top:1px solid var(--line)}
 .section-head{
   display:flex;align-items:end;justify-content:space-between;gap:22px;
-  padding-top:24px;margin-bottom:20px
+  padding-top:26px;margin-bottom:22px
 }
 h2{margin:0;font-size:clamp(30px,4vw,48px);letter-spacing:-.03em}
 html[lang="ko"] h2{line-height:1.18}
 .sub{color:var(--muted);max-width:700px;margin:8px 0 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px}
-.prices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.price-card{padding:20px;background:var(--soft2)}
+.prices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.price-card{padding:20px 21px;background:var(--soft2)}
 .price-top{display:flex;justify-content:space-between;gap:18px;align-items:start}
 .price-name{font-weight:850;font-size:19px}
 .price-desc{color:var(--muted);font-size:14px;margin-top:5px}
@@ -133,10 +173,10 @@ html[lang="ko"] h2{line-height:1.18}
 .addon strong{display:block}
 .addon small{display:block;color:var(--muted);margin-top:4px}
 .addon .tag{font-weight:900;white-space:nowrap}
-.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .string-card{padding:0;background:var(--soft2);overflow:hidden}
 .string-card img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;background:#f1ede5}
-.string-body{padding:18px 18px 20px}
+.string-body{padding:20px 21px 22px}
 .string-card h3,.tip-card h3{margin:0 0 7px;font-size:20px}
 .string-meta{font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:850;color:var(--muted)}
 html[lang="ko"] .string-meta{letter-spacing:.04em}
@@ -183,9 +223,9 @@ html[lang="ko"] .string-meta{letter-spacing:.04em}
   text-underline-offset:2px;
 }
 
-.machine{display:grid;grid-template-columns:1.08fr .92fr;gap:12px;align-items:start}
+.machine{display:grid;grid-template-columns:1.08fr .92fr;gap:14px;align-items:start}
 .machine-main{padding:24px;background:var(--soft2)}
-.machine-right{display:grid;gap:12px;align-content:start;align-self:start}
+.machine-right{display:grid;gap:14px;align-content:start;align-self:start}
 .machine-kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:850}
 html[lang="ko"] .machine-kicker{letter-spacing:.05em}
 .machine-title{font-size:clamp(28px,4vw,44px);letter-spacing:-.04em;margin:8px 0 12px;line-height:1.04}
@@ -258,8 +298,8 @@ html[lang="ko"] .machine-kicker{letter-spacing:.05em}
   letter-spacing:.1em;
   color:var(--muted);
 }
-.tips-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.tip-card{padding:20px;background:var(--soft2)}
+.tips-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.tip-card{padding:20px 21px;background:var(--soft2)}
 .tip-card.full{grid-column:1/-1}
 .tip-icon{font-size:22px;margin-bottom:8px}
 .mini-table{
@@ -286,7 +326,7 @@ html[lang="ko"] .mini-table th{letter-spacing:.04em}
 .work-gallery{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:12px;
+  gap:14px;
   margin-bottom:14px;
 }
 .work-photo{
@@ -352,6 +392,12 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
   .myth{grid-template-columns:1fr;gap:6px}
 }
 @media(max-width:720px){
+  .panel summary{padding:20px 20px;min-height:92px;gap:18px}
+  .panel-summary-left{grid-template-columns:38px minmax(0,1fr);column-gap:14px}
+  .panel-number{width:38px;height:38px;font-size:11px}
+  .panel-title{font-size:clamp(20px,7vw,28px)}
+  .panel-sub{font-size:12.5px}
+  .chevron{width:34px;height:34px;font-size:19px}
   .standards-head{align-items:start;flex-direction:column}
   .standards-grid{grid-template-columns:1fr}
   .work-gallery{grid-template-columns:1fr}
@@ -360,6 +406,10 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
   .panel-body{padding:0 20px 22px}
   .panel-sub{display:none}
   .footerline{flex-direction:column}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .panel summary,.chevron,.panel[open] .panel-body{transition:none;animation:none}
 }
 </style>
 </head>
@@ -405,7 +455,7 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
           <summary>
             <div class="panel-summary-left">
               <div class="panel-number">01</div>
-              <div>
+              <div class="summary-copy">
                 <div class="panel-title" data-en="Pricing" data-ko="가격">Pricing</div>
                 <div class="panel-sub" data-en="Public and YKTS member rates" data-ko="일반 및 YKTS 회원 가격">Public and YKTS member rates</div>
               </div>
@@ -485,7 +535,7 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
           <summary>
             <div class="panel-summary-left">
               <div class="panel-number">02</div>
-              <div>
+              <div class="summary-copy">
                 <div class="panel-title" data-en="House Strings" data-ko="하우스 스트링">House Strings</div>
                 <div class="panel-sub" data-en="Comfort, all around poly, and spin" data-ko="편안함, 범용 폴리, 스핀">Comfort, all around poly, and spin</div>
               </div>
@@ -668,9 +718,9 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
           <summary>
             <div class="panel-summary-left">
               <div class="panel-number">03</div>
-              <div>
-                <div class="panel-title" data-en="Stringing Machine" data-ko="스트링 머신">Stringing Machine</div>
-                <div class="panel-sub" data-en="The hardware behind the process" data-ko="작업 품질을 만드는 장비">The hardware behind the process</div>
+              <div class="summary-copy">
+                <div class="panel-title" data-en="Stringing Setup" data-ko="스트링 세팅">Stringing Setup</div>
+                <div class="panel-sub" data-en="The hardware and standards behind the process" data-ko="장비와 작업 기준">The hardware and standards behind the process</div>
               </div>
             </div>
             <div class="chevron">+</div>
@@ -807,7 +857,6 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
                 </div>
               </div>
             </div>
-          </div>
         </details>
 
 
@@ -815,7 +864,7 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
           <summary>
             <div class="panel-summary-left">
               <div class="panel-number">04</div>
-              <div>
+              <div class="summary-copy">
                 <div class="panel-title" data-en="Recent Work" data-ko="최근 작업">Recent Work</div>
                 <div class="panel-sub" data-en="A few racquets and selected setups" data-ko="최근 작업 사진과 세팅 기록">A few racquets and selected setups</div>
               </div>
@@ -895,7 +944,7 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
           <summary>
             <div class="panel-summary-left">
               <div class="panel-number">05</div>
-              <div>
+              <div class="summary-copy">
                 <div class="panel-title" data-en="Tennis and String Tips" data-ko="테니스 & 스트링 팁">Tennis and String Tips</div>
                 <div class="panel-sub" data-en="Restringing, tension, string choice, and care" data-ko="교체 시기, 텐션, 스트링 선택, 관리">Restringing, tension, string choice, and care</div>
               </div>
