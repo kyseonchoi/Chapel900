@@ -202,6 +202,62 @@ html[lang="ko"] .machine-kicker{letter-spacing:.05em}
 .machine-side{padding:24px;background:var(--ink);color:#fff;border-color:var(--ink);align-self:start;height:auto}
 .machine-side p{color:#d6d2ca}
 .machine-side .big{font-size:33px;font-weight:900;letter-spacing:-.04em;line-height:1.05;margin:10px 0}
+
+.standards{
+  margin-top:14px;
+  padding:22px;
+  background:var(--soft2);
+  border:1px solid var(--line);
+  border-radius:18px;
+}
+.standards-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:16px;
+  margin-bottom:14px;
+}
+.standards-head h3{
+  margin:5px 0 0;
+  font-size:24px;
+  letter-spacing:-.025em;
+}
+.standards-head p{
+  margin:0;
+  max-width:560px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.55;
+}
+.standards-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:9px;
+}
+.standard{
+  padding:15px;
+  border-radius:14px;
+  background:#fff;
+  border:1px solid var(--line);
+}
+.standard strong{
+  display:block;
+  margin-bottom:5px;
+  font-size:14px;
+}
+.standard span{
+  font-size:12.5px;
+  color:#605d57;
+  line-height:1.55;
+}
+.standard .num{
+  display:inline-block;
+  margin-bottom:8px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.1em;
+  color:var(--muted);
+}
 .tips-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .tip-card{padding:20px;background:var(--soft2)}
 .tip-card.full{grid-column:1/-1}
@@ -288,6 +344,7 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
 .footerline{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:22px}
 @media(max-width:900px){
   .prices,.grid3,.machine,.tips-grid{grid-template-columns:1fr}
+  .standards-grid{grid-template-columns:1fr 1fr}
   .work-gallery{grid-template-columns:1fr 1fr}
   .tip-card.full{grid-column:auto}
   .specs{grid-template-columns:1fr}
@@ -295,6 +352,8 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
   .myth{grid-template-columns:1fr;gap:6px}
 }
 @media(max-width:720px){
+  .standards-head{align-items:start;flex-direction:column}
+  .standards-grid{grid-template-columns:1fr}
   .work-gallery{grid-template-columns:1fr}
   .hero{padding-top:58px}
   .panel summary{padding:20px}
@@ -640,7 +699,7 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
                 <aside class="card machine-side">
                 <div class="smallcaps" data-en="Why it matters" data-ko="왜 중요한가">Why it matters</div>
                 <div class="big" data-en="Consistency over speed." data-ko="속도보다 일관성.">Consistency over speed.</div>
-                <p data-en="Every main and cross is pulled individually. Clamp position, pull sequence, and timing are kept consistent so the same recipe can be reproduced from job to job." data-ko="메인과 크로스를 한 줄씩 개별적으로 당깁니다. 클램프 위치, pull 순서, 작업 리듬을 일정하게 유지해 같은 레시피를 반복할 수 있도록 합니다.">Every main and cross is pulled individually. Clamp position, pull sequence, and timing are kept consistent so the same recipe can be reproduced from job to job.</p>
+                <p data-en="Repeatability comes from controlling the details: mounting, pull sequence, clamp placement, timing, and final inspection. The goal is not the fastest job, but to reproduce the same recipe consistently." data-ko="재현성은 마운팅, 당김 순서, 클램프 위치, 작업 리듬, 최종 점검 같은 세부 요소를 일정하게 관리하는 데서 나옵니다. 가장 빠르게 끝내는 것보다 같은 레시피를 일관되게 재현하는 것을 우선합니다.">Repeatability comes from controlling the details: mounting, pull sequence, clamp placement, timing, and final inspection. The goal is not the fastest job, but to reproduce the same recipe consistently.</p>
                 </aside>
 
                 <div class="specs">
@@ -669,6 +728,82 @@ footer{padding:46px 0 68px;color:var(--muted);font-size:13px}
                     <span data-en="Designed for secure grip when clamp pressure is correctly adjusted." data-ko="클램프 압력을 적절히 조절하면 스트링 손상을 줄이면서 안정적으로 고정할 수 있습니다.">Designed for secure grip when clamp pressure is correctly adjusted.</span>
                   </div>
                 </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="standards">
+              <div class="standards-head">
+                <div>
+                  <div class="smallcaps" data-en="Stringing Standards" data-ko="스트링 작업 기준">Stringing Standards</div>
+                  <h3 data-en="A consistent process, string by string." data-ko="한 줄씩, 같은 기준으로 작업합니다.">A consistent process, string by string.</h3>
+                </div>
+                <p
+                  data-en="These are the working standards used at Chapel 900. Manufacturer-specific instructions take priority whenever they are available."
+                  data-ko="Chapel 900에서 실제 작업에 적용하는 기준입니다. 제조사의 공식 스트링 지침이 있는 경우 해당 지침을 우선합니다.">
+                  These are the working standards used at Chapel 900. Manufacturer-specific instructions take priority whenever they are available.
+                </p>
+              </div>
+
+              <div class="standards-grid">
+                <div class="standard">
+                  <div class="num">01</div>
+                  <strong data-en="One string, one pull" data-ko="한 줄씩 개별 텐션">One string, one pull</strong>
+                  <span
+                    data-en="Each main and cross is tensioned individually. Double pulling two strings at once is not used."
+                    data-ko="메인과 크로스를 한 줄씩 각각 당깁니다. 두 줄을 한 번에 당기는 double pull은 사용하지 않습니다.">
+                    Each main and cross is tensioned individually. Double pulling two strings at once is not used.
+                  </span>
+                </div>
+
+                <div class="standard">
+                  <div class="num">02</div>
+                  <strong data-en="Manufacturer-first patterns" data-ko="제조사 공식 패턴 우선">Manufacturer-first patterns</strong>
+                  <span
+                    data-en="Published manufacturer patterns determine start points, skips, tie-offs, and one- or two-piece construction."
+                    data-ko="시작 위치, 스킵 홀, 타이오프 위치, 원피스·투피스 여부는 제조사의 공식 패턴을 기준으로 정합니다.">
+                    Published manufacturer patterns determine start points, skips, tie-offs, and one- or two-piece construction.
+                  </span>
+                </div>
+
+                <div class="standard">
+                  <div class="num">03</div>
+                  <strong data-en="Starting clamp for clean cross starts" data-ko="크로스 시작 시 스타팅 클램프 활용">Starting clamp for clean cross starts</strong>
+                  <span
+                    data-en="A starting clamp is used when appropriate so crosses can be started cleanly without relying unnecessarily on a starting knot."
+                    data-ko="필요한 경우 스타팅 클램프를 사용해 크로스를 시작하며, 불필요하게 starting knot에 의존하지 않습니다.">
+                    A starting clamp is used when appropriate so crosses can be started cleanly without relying unnecessarily on a starting knot.
+                  </span>
+                </div>
+
+                <div class="standard">
+                  <div class="num">04</div>
+                  <strong data-en="Balanced main progression" data-ko="메인 텐션은 좌우 균형 있게">Balanced main progression</strong>
+                  <span
+                    data-en="Main strings are progressed in a balanced sequence to avoid loading one side of the frame excessively."
+                    data-ko="프레임 한쪽에 장력이 과도하게 몰리지 않도록 메인 스트링을 좌우 균형 있는 순서로 진행합니다.">
+                    Main strings are progressed in a balanced sequence to avoid loading one side of the frame excessively.
+                  </span>
+                </div>
+
+                <div class="standard">
+                  <div class="num">05</div>
+                  <strong data-en="Low-friction cross weaving" data-ko="마찰을 줄이는 크로스 위빙">Low-friction cross weaving</strong>
+                  <span
+                    data-en="Crosses are woven at an angle and, when practical, one ahead to reduce friction, heat, and premature notching."
+                    data-ko="크로스는 비스듬한 각도로 위빙하고, 가능한 경우 one-ahead 방식으로 진행해 마찰과 열, 조기 노칭을 줄입니다.">
+                    Crosses are woven at an angle and, when practical, one ahead to reduce friction, heat, and premature notching.
+                  </span>
+                </div>
+
+                <div class="standard">
+                  <div class="num">06</div>
+                  <strong data-en="Straight before the pull" data-ko="당기기 전 스트링 정렬">Straight before the pull</strong>
+                  <span
+                    data-en="Each string is kept straight while tension is applied, with consistent clamp placement and pull timing."
+                    data-ko="텐션을 걸 때 스트링이 곧게 정렬되도록 하고, 클램프 위치와 당김 타이밍도 가능한 한 일정하게 유지합니다.">
+                    Each string is kept straight while tension is applied, with consistent clamp placement and pull timing.
+                  </span>
                 </div>
               </div>
             </div>
